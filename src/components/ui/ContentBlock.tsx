@@ -18,9 +18,17 @@ export function ContentBlock({
   lightThemeClass = "bg-[#EBF7F2]" 
 }: ContentBlockProps) {
   return (
-    <div className={`${lightThemeClass} rounded-2xl p-5 mb-4 group relative`}>
-      {/* Block Header with Title and Actions */}
-      <div className="flex justify-between items-start mb-3">
+    <div className="mb-4">
+      {/* Section Title (Optional) */}
+      {block.sectionTitle && (
+        <h3 className="text-white text-base font-medium mb-3 px-2">
+          {block.sectionTitle}
+        </h3>
+      )}
+      
+      <div className={`${lightThemeClass} rounded-2xl p-5 group relative`}>
+        {/* Block Header with Title and Actions */}
+        <div className="flex justify-between items-start mb-3">
         {block.title && (
           <h4 className="text-[15px] font-medium text-gray-800">{block.title}</h4>
         )}
@@ -60,6 +68,7 @@ export function ContentBlock({
           {block.content}
         </div>
       )}
+      </div>
     </div>
   )
 }

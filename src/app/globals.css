@@ -14,7 +14,7 @@
 }
 
 :root {
-  --background: #EAEAEB; /* Light gray background from screenshots */
+  --background: #E6E6E6; /* Global application background */
   --foreground: #1c1917; /* Dark text */
   
   --primary: #c55d3d; /* The rust/orange color */

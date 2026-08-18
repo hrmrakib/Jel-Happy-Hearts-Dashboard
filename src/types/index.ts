@@ -116,6 +116,7 @@ export interface ContentBlockData {
   content: string; // HTML or plain text representing the content
   type?: "text" | "options"; // determines if we render options list or normal content
   options?: string[]; // for Happy Heart options list
+  sectionTitle?: string; // Optional title that appears above the block
 }
 
 export interface VideoData {
@@ -132,6 +133,7 @@ export interface CategoryItem {
   title: string;
   blocks: ContentBlockData[];
   video?: VideoData;
+  imageUpload?: boolean; // For Image Upload block
   completed?: boolean;
 }
 

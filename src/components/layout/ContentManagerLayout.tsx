@@ -7,6 +7,7 @@ import { RichTextToolbar } from "@/components/ui/RichTextToolbar"
 import { ContentBlock } from "@/components/ui/ContentBlock"
 import { VideoUploadBlock } from "@/components/ui/VideoUploadBlock"
 import { VideoPreviewCard } from "@/components/ui/VideoPreviewCard"
+import { ImageUploadBlock } from "@/components/ui/ImageUploadBlock"
 import { Category } from "@/types"
 
 interface ContentManagerLayoutProps {
@@ -15,6 +16,8 @@ interface ContentManagerLayoutProps {
   themeClass: string       // e.g. "bg-[#549E7C]"
   lightThemeClass: string  // e.g. "bg-[#EBF7F2]"
   hoverThemeClass: string  // e.g. "hover:bg-[#dff0e9]"
+  contentWrapperClass?: string // Optional wrapper class for content area
+  blockBgClass?: string // Background class for blocks
 }
 
 export function ContentManagerLayout({
@@ -23,6 +26,8 @@ export function ContentManagerLayout({
   themeClass,
   lightThemeClass,
   hoverThemeClass,
+  contentWrapperClass = "bg-white",
+  blockBgClass
 }: ContentManagerLayoutProps) {
   const categories = Object.values(data)
   
@@ -56,24 +61,26 @@ export function ContentManagerLayout({
       <Header title={pageTitle} />
       
       <main className="flex-1 flex flex-col mt-2 px-6">
-        {/* Main Tabs */}
-        <div className="flex border-b border-gray-100 mb-6 overflow-x-auto no-scrollbar">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveTab(category.id)}
-              className={`
-                px-6 py-4 text-sm font-medium whitespace-nowrap border-b-2 transition-colors
-                ${activeTab === category.id 
-                  ? 'border-primary text-gray-900' 
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200'
-                }
-              `}
-            >
-              {category.title}
-            </button>
-          ))}
-        </div>
+        {/* Main Tabs (Only render if there are multiple tabs) */}
+        {categories.length > 1 && (
+          <div className="flex border-b border-gray-100 mb-6 overflow-x-auto no-scrollbar">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`
+                  px-6 py-4 text-sm font-medium whitespace-nowrap border-b-2 transition-colors
+                  ${activeTab === category.id 
+                    ? 'border-primary text-gray-900' 
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200'
+                  }
+                `}
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Sub Tabs (if any) */}
         {activeCategory?.subTabs && (
@@ -106,8 +113,7 @@ export function ContentManagerLayout({
                   key={item.id}
                   onClick={() => {
                     setActiveItemId(item.id)
-                    setIsEditing(false) // Toggle to view mode when switching, or keep edit if desired. 
-                    // Based on mockups, it defaults to view mode or edit mode depending on action.
+                    setIsEditing(false) 
                   }}
                   className={`
                     group flex items-center justify-between p-4 rounded-xl cursor-pointer transition-colors
@@ -174,8 +180,12 @@ export function ContentManagerLayout({
               </div>
 
               {/* Editor Content Area */}
-              <div className="flex-1 bg-white rounded-2xl p-6 overflow-hidden flex flex-col relative">
-                {isEditing && <RichTextToolbar />}
+              <div className={`flex-1 ${contentWrapperClass} rounded-2xl p-6 overflow-hidden flex flex-col relative`}>
+                {isEditing && (
+                  <div className={contentWrapperClass === "bg-transparent" ? "bg-white rounded-t-2xl pt-2 px-2" : ""}>
+                     <RichTextToolbar />
+                  </div>
+                )}
                 
                 <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                   {activeItem.blocks.map((block) => (
@@ -184,17 +194,20 @@ export function ContentManagerLayout({
                       block={block} 
                       isEditing={isEditing} 
                       themeClass={themeClass}
-                      lightThemeClass={lightThemeClass}
+                      lightThemeClass={blockBgClass || lightThemeClass}
                     />
                   ))}
 
-                  {/* Video Section */}
-                  {(activeItem.video || isEditing) && (
+                  {/* Video/Image Upload Section */}
+                  {(activeItem.video || activeItem.imageUpload || isEditing) && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                       {activeItem.video && (
                         <VideoPreviewCard video={activeItem.video} isEditing={isEditing} />
                       )}
-                      {isEditing && (
+                      {activeItem.imageUpload && isEditing && (
+                        <ImageUploadBlock />
+                      )}
+                      {!activeItem.imageUpload && isEditing && (
                         <VideoUploadBlock />
                       )}
                     </div>

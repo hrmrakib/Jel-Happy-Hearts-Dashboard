@@ -12,6 +12,8 @@ export default function HappyHeartPage() {
       themeClass="bg-[#646BB6]"
       lightThemeClass="bg-[#F4F5FB]"
       hoverThemeClass="hover:bg-[#e8e9f5]"
+      contentWrapperClass="bg-transparent"
+      blockBgClass="bg-white"
     />
   )
 }

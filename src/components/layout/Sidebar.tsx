@@ -13,7 +13,8 @@ import {
   FileText, 
   LogOut,
   Dumbbell,
-  X
+  X,
+  LifeBuoy
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -25,6 +26,7 @@ const navigation = [
   { name: "Happy Heart", href: "/happy-heart", icon: Heart },
   { name: "Happy Smile", href: "/happy-smile", icon: Smile },
   { name: "Subscription", href: "/subscription", icon: CreditCard },
+  { name: "Support", href: "/support", icon: LifeBuoy },
   { name: "Legacy & Policy", href: "/legacy-policy", icon: FileText },
 ]
 

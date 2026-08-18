@@ -650,3 +650,92 @@ export const mockHappyHeartData: Record<string, Category> = {
   "Tool 3": { id: "hh_t3", title: "Tool 3", items: [] },
   "Tool 4": { id: "hh_t4", title: "Tool 4", items: [] },
 };
+
+export const mockHappySmileData: Record<string, Category> = {
+  "Main": { // Since there are no tabs in Happy Smile images, I'll use a single category
+    id: "hs_main",
+    title: "Happy Smile",
+    items: [
+      {
+        id: "hs_who",
+        title: "Who is this for?",
+        blocks: [
+          { id: "hs_w1", title: "Title", content: "Where is the charge sitting right now?" },
+          { id: "hs_w2", title: "Subtitle", content: "Place one hand on your chest or belly. Don't name it as an emotion yet — find it as a sensation." }
+        ]
+      },
+      {
+        id: "hs_topic",
+        title: "Important Topic for you",
+        blocks: [
+          { id: "hs_t1", title: "Title", content: "Craniodental Osteopathy" },
+          { id: "hs_t2", title: "Subtitle", content: "Place one hand on your chest or belly. Don't name it as an emotion yet — find it as a sensation." }
+        ]
+      },
+      {
+        id: "hs_exercise",
+        title: "Exercise",
+        video: {
+          id: "hs_v1",
+          title: "Release The Tension",
+          subtitle: "A gentle practice to help your child reconnect with nose breathing",
+          duration: "2mnt",
+          thumbnailUrl: "https://images.unsplash.com/photo-1590650046528-e4bf934dd95e?w=400&q=80"
+        },
+        blocks: [
+          { id: "hs_e1", title: "Title", content: "Why the exercise are important?" },
+          { id: "hs_e2", title: "Subtitle", content: "Simple exercises for better health and well-being." }
+        ]
+      },
+      {
+        id: "hs_signs",
+        title: "Signs",
+        blocks: [
+          { 
+            id: "hs_s1", 
+            sectionTitle: "Did you know?",
+            title: "Title", 
+            content: "Why the exercise are important?" 
+          },
+          { 
+            id: "hs_s2", 
+            title: "Dropdown Item", 
+            content: "Simple exercises for better health and well-being." 
+          },
+          { 
+            id: "hs_s3", 
+            sectionTitle: "Signs Jaw Development May Need Support",
+            title: "", 
+            content: "",
+            type: "options",
+            options: [
+              "Difficulty concentrating",
+              "Difficulty concentrating"
+            ]
+          }
+        ]
+      },
+      {
+        id: "hs_vivos",
+        title: "Vivos",
+        imageUpload: true,
+        blocks: [
+          { 
+            id: "hs_v1", 
+            sectionTitle: "Did you know?",
+            title: "Title", 
+            content: "NON-SURGICAL JAW & AIRWAY DEVELOPMENT" 
+          },
+          { 
+            id: "hs_v2", 
+            title: "Body Text", 
+            content: "VIVOS addresses the root cause of many childhood breathing, sleep and developmental challenges underdeveloped jaws and restricted airways, 50+ years of clinical history, beginning as early as age 3." 
+          }
+        ]
+      },
+      { id: "hs_alf", title: "ALF", blocks: [] },
+      { id: "hs_patient", title: "Patient", blocks: [] },
+      { id: "hs_clinicians", title: "Clinicians", blocks: [] }
+    ]
+  }
+};
