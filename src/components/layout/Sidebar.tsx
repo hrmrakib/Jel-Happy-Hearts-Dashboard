@@ -34,7 +34,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname()
 
   return (
-    <div className="flex h-full w-64 flex-col bg-sidebar border-r relative">
+    <div className="flex h-full w-64 flex-col bg-white border-r relative">
       {/* Mobile close button */}
       {onClose && (
         <button 
