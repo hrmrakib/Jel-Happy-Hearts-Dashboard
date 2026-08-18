@@ -107,3 +107,35 @@ export interface TopSellingProduct {
   trend: number; // percentage change
   image?: string;
 }
+
+// --- Happy Bodies Interfaces ---
+
+export interface ContentBlockData {
+  id: string;
+  title: string;
+  content: string; // HTML or plain text representing the content
+}
+
+export interface VideoData {
+  id: string;
+  title: string;
+  subtitle?: string;
+  duration?: string;
+  thumbnailUrl?: string;
+  videoUrl?: string;
+}
+
+export interface CategoryItem {
+  id: string;
+  title: string;
+  blocks: ContentBlockData[];
+  video?: VideoData;
+  completed?: boolean;
+}
+
+export interface Category {
+  id: string;
+  title: string;
+  subTabs?: string[];
+  items: CategoryItem[];
+}

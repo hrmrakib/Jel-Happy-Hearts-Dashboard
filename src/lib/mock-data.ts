@@ -358,3 +358,160 @@ export const mockTopSellingProducts: TopSellingProduct[] = [
     trend: -9.3,
   },
 ];
+
+import { Category } from "@/types";
+
+export const mockHappyBodiesData: Record<string, Category> = {
+  "Body Religion Library": {
+    id: "cat_brl",
+    title: "Body Religion Library",
+    subTabs: ["Child", "Parents"],
+    items: [
+      {
+        id: "brl_1",
+        title: "Head & Skull",
+        blocks: [
+          {
+            id: "b1",
+            title: "Emotional & Energetic theme",
+            content: "Thinking, identity, feeling overwhelmed, too much responsibility placed on the mind"
+          },
+          {
+            id: "b2",
+            title: "Emotional & Energetic theme",
+            content: "Thinking, identity, feeling overwhelmed, too much responsibility placed on the mind"
+          },
+          {
+            id: "b3",
+            title: "Osteopathic View",
+            content: "The cranial bones house and protect the brain and allow the free circulation of cerebrospinal fluid. Tension patterns in the skull — from birth, from falls, from jaw imbalance — affect neurological tone, sleep, concentration and emotional regulation."
+          },
+          {
+            id: "b4",
+            title: "For Children",
+            content: "In children, head symptoms often reflect the enormous amount of neurological processing happening as the brain develops. Headaches may signal that the nervous system is working beyond its comfortable capacity."
+          },
+          {
+            id: "b5",
+            title: "For Parents",
+            content: "In parents, chronic head symptoms may reflect the weight of mental responsibility. The mind that never stops problem-solving, the body asking to be led by the heart rather than the head."
+          },
+          {
+            id: "b6",
+            title: "Ask to AI",
+            content: "I'm here to help you understand what you're noticing and find gentle practices that support your child's wellbeing."
+          }
+        ]
+      },
+      { id: "brl_2", title: "Eyes & Vision", blocks: [] },
+      { id: "brl_3", title: "Ears & Hearing", blocks: [] },
+      { id: "brl_4", title: "Jaw & Teeth", blocks: [] },
+      { id: "brl_5", title: "Throat & Voice", blocks: [] },
+      { id: "brl_6", title: "Chest & Heart", blocks: [] },
+      { id: "brl_7", title: "Belly & Gut", blocks: [] },
+      { id: "brl_8", title: "Lower back & Sacrum", blocks: [] }
+    ]
+  },
+  "Development Milestone": {
+    id: "cat_dm",
+    title: "Development milestone",
+    items: [
+      {
+        id: "dm_1",
+        title: "0-3 months",
+        blocks: [
+          {
+            id: "dm_b1",
+            title: "Physical",
+            content: "1. Lifts head briefly on tummy\n2. Brings hands to mouth\n3. Moves limbs symmetrically\n4. Follows a face to midline"
+          },
+          {
+            id: "dm_b2",
+            title: "Neurological",
+            content: "1. Moro (startle) reflex active\n2. Rooting and sucking reflexes active\n3. Tonic neck reflex active\n4. Responds to sound"
+          },
+          {
+            id: "dm_b3",
+            title: "Osteopathic Perspective",
+            content: "Birth places significant forces through the skull, neck and spine. Cranial osteopathy in the first weeks resolves delivery tension, supports..."
+          },
+          {
+            id: "dm_b4",
+            title: "Sign to Watch",
+            content: "■ Not lifting head by 3 months\n■ Always turning to one side\n■ Difficulty latching or feeding\n■ Excessive unsettled crying\n■ No settling to caregiver's voice or touch"
+          },
+          {
+            id: "dm_b5",
+            title: "Emotional",
+            content: "1. Feels safe only through your voice, touch, and smell\n2. Communicates entirely through crying and body tension\n3. Borrows your nervous system to settle their own\n4. Starts to track and prefer familiar faces"
+          }
+        ],
+        video: {
+          id: "v1",
+          title: "Release The Tension",
+          subtitle: "A gentle practice to help your child reconnect with nose breathing",
+          duration: "2mnt",
+          thumbnailUrl: "https://images.unsplash.com/photo-1590650046528-e4bf934dd95e?w=400&q=80"
+        }
+      },
+      { id: "dm_2", title: "4-6 Months", blocks: [] },
+      { id: "dm_3", title: "7-9 Months", blocks: [] },
+      { id: "dm_4", title: "10-12 Months", blocks: [] },
+      { id: "dm_5", title: "13-15 Months", blocks: [] },
+      { id: "dm_6", title: "16-18 Months", blocks: [], completed: true }
+    ]
+  },
+  "Movement GYM": {
+    id: "cat_mg",
+    title: "Movement GYM",
+    items: [
+      {
+        id: "mg_1",
+        title: "Tummy Time & Position Play",
+        blocks: [
+          {
+            id: "mg_b1",
+            title: "About This Pattern",
+            content: "Tummy time is not just one position — it is a whole world of varied, active play that builds the strength your baby needs for every milestone that follows. Rather than placing your baby flat on a mat and hoping for the best, think of tummy time as an invitation to explore: on your chest, over your thigh, on a gentle incline, on varied surfaces."
+          },
+          {
+            id: "mg_b2",
+            title: "Osteopathic Perspective",
+            content: "From an osteopathic perspective, the prone position activates the entire posterior chain — the anti-gravity muscle system that is inseparable from healthy neurological development. Babies with cranial compressions or birth strains often resist tummy time because it is genuinely uncomfortable for them."
+          },
+          {
+            id: "mg_b3",
+            title: "What to watch out for:",
+            content: "Dislikes all tummy time positions\nStrong preference for looking one direction\nFlat spot developing on the back of head\nNeck tension or tightness\n\nHead control delayed beyond 4 months\n\n1. On your chest: Semi-recline on the sofa or bed...\n2. Inclined tummy time: Over your lap...\n3. Side-lying: An often overlooked position...\n4. Floor tummy time: On a soft but firm surface...\n5. Follow baby's cues: Watch for enjoyment...\n6. As baby grows stronger: Encourage reaching for toys..."
+          },
+          {
+            id: "mg_b4",
+            title: "Frequency & Progression",
+            content: "Multiple short bursts throughout the day from the first weeks of life. Aim for variety across positions — floor, chest, lap, incline — rather than one long daily session."
+          }
+        ],
+        video: {
+          id: "v2",
+          title: "Release The Tension",
+          subtitle: "A gentle practice to help your child reconnect with nose breathing",
+          duration: "2mnt",
+          thumbnailUrl: "https://images.unsplash.com/photo-1590650046528-e4bf934dd95e?w=400&q=80"
+        }
+      },
+      { id: "mg_2", title: "Rolling - The First Full-Body Conversation", blocks: [] },
+      { id: "mg_3", title: "Sitting - Building the Core from the Inside Out", blocks: [] },
+      { id: "mg_4", title: "Crawling - The Neurological Foundation", blocks: [] },
+      { id: "mg_5", title: "Standing, Cruising & First Steps", blocks: [] },
+      { id: "mg_6", title: "Active Play for Toddlers & Beyond", blocks: [], completed: true }
+    ]
+  },
+  "Reflex GYM": {
+    id: "cat_rg",
+    title: "Reflex GYM",
+    items: [
+      { id: "rg_1", title: "Moro Reflex", blocks: [] },
+      { id: "rg_2", title: "Rooting Reflex", blocks: [] },
+      { id: "rg_3", title: "Palmar Grasp", blocks: [] }
+    ]
+  }
+};
