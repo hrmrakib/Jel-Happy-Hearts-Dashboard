@@ -43,7 +43,23 @@ export interface Product {
   previousStock?: number;
 }
 
-export type OrderStatus = "Delivered" | "Processing" | "Shipped" | "Pending" | "Canceled";
+export type OrderStatus = "New" | "Pending" | "Received" | "Confirmed" | "Processing" | "Packed" | "Shipped" | "Delivered" | "Completed" | "Canceled";
+
+export interface OrderItem {
+  id: string;
+  product: Product;
+  quantity: number;
+  unitPrice: number;
+  total: number;
+}
+
+export interface OrderSummary {
+  subtotal: number;
+  discount: number;
+  shipping: number;
+  tax: number;
+  total: number;
+}
 
 export interface Order {
   id: string;
@@ -52,11 +68,19 @@ export interface Order {
     name: string;
     avatarUrl: string;
     id: string; // The #12345 ID string
+    email?: string;
+    phone?: string;
+    address?: string;
+    initials?: string;
   };
-  productName: string;
+  productName: string; // Keep for the summary table
+  itemCount: number;
   amount: number;
   status: OrderStatus;
   date: string;
+  placedTime?: string;
+  items?: OrderItem[];
+  summary?: OrderSummary;
 }
 
 export interface StoreSummaryData {

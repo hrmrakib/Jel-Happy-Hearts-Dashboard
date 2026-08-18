@@ -2,27 +2,24 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Package, Clock, ShoppingBag } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Package, ShoppingCart } from "lucide-react"
 
 export function QuickActions() {
+  const pathname = usePathname()
+
   const actions = [
     {
       title: "Manage Product",
       icon: Package,
       href: "/manage-store/products",
-      active: true,
+      active: pathname === "/manage-store/products",
     },
     {
-      title: "Pending Order",
-      icon: Clock,
-      href: "#",
-      active: false,
-    },
-    {
-      title: "My Orders",
-      icon: ShoppingBag,
-      href: "#",
-      active: false,
+      title: "Order",
+      icon: ShoppingCart,
+      href: "/manage-store/orders",
+      active: pathname === "/manage-store/orders",
     },
   ]
 

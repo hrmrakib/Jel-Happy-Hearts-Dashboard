@@ -181,64 +181,119 @@ export const mockOrders: Order[] = [
     user: {
       name: "Olivia Rhye",
       id: "#12345",
+      email: "olivia@example.com",
+      phone: "+1 234 567 890",
+      address: "124 Wellness Way\nSerenity City, CA 90210",
       avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+      initials: "OR"
     },
     productName: "Standing Desk Pro",
+    itemCount: 3,
     amount: 212,
     status: "Delivered",
     date: "19 March, 2026",
+    placedTime: "Oct 24, 2023, 10:42 AM",
+    summary: { subtotal: 61.00, discount: 5.00, shipping: 8.50, tax: 5.00, total: 69.50 },
+    items: [
+      { id: "i1", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 },
+      { id: "i2", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 }
+    ]
   },
   {
     id: "o2",
-    orderId: "#ORD-8822",
+    orderId: "#ORD-8821",
     user: {
       name: "Olivia Rhye",
       id: "#12345",
+      email: "olivia@example.com",
+      phone: "+1 234 567 890",
+      address: "124 Wellness Way\nSerenity City, CA 90210",
       avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+      initials: "OR"
     },
     productName: "Standing Desk Pro",
+    itemCount: 3,
     amount: 212,
     status: "Processing",
     date: "19 March, 2026",
+    placedTime: "Oct 24, 2023, 10:42 AM",
+    summary: { subtotal: 61.00, discount: 5.00, shipping: 8.50, tax: 5.00, total: 69.50 },
+    items: [
+      { id: "i1", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 },
+      { id: "i2", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 }
+    ]
   },
   {
     id: "o3",
-    orderId: "#ORD-8823",
+    orderId: "#ORD-8821",
     user: {
       name: "Olivia Rhye",
       id: "#12345",
+      email: "olivia@example.com",
+      phone: "+1 234 567 890",
+      address: "124 Wellness Way\nSerenity City, CA 90210",
       avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+      initials: "OR"
     },
     productName: "Standing Desk Pro",
+    itemCount: 3,
     amount: 212,
     status: "Shipped",
     date: "19 March, 2026",
+    placedTime: "Oct 24, 2023, 10:42 AM",
+    summary: { subtotal: 61.00, discount: 5.00, shipping: 8.50, tax: 5.00, total: 69.50 },
+    items: [
+      { id: "i1", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 },
+      { id: "i2", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 }
+    ]
   },
   {
     id: "o4",
-    orderId: "#ORD-8824",
+    orderId: "#ORD-8821",
     user: {
       name: "Olivia Rhye",
       id: "#12345",
+      email: "olivia@example.com",
+      phone: "+1 234 567 890",
+      address: "124 Wellness Way\nSerenity City, CA 90210",
       avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+      initials: "OR"
     },
     productName: "Standing Desk Pro",
+    itemCount: 3,
     amount: 212,
     status: "Pending",
     date: "19 March, 2026",
+    placedTime: "Oct 24, 2023, 10:42 AM",
+    summary: { subtotal: 61.00, discount: 5.00, shipping: 8.50, tax: 5.00, total: 69.50 },
+    items: [
+      { id: "i1", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 },
+      { id: "i2", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 }
+    ]
   },
   {
     id: "o5",
-    orderId: "#ORD-8825",
+    orderId: "#ORD-8821",
     user: {
       name: "Olivia Rhye",
       id: "#12345",
+      email: "olivia@example.com",
+      phone: "+1 234 567 890",
+      address: "124 Wellness Way\nSerenity City, CA 90210",
       avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+      initials: "OR"
     },
     productName: "Standing Desk Pro",
+    itemCount: 3,
     amount: 212,
-    status: "Canceled",
+    status: "Completed",
     date: "19 March, 2026",
+    placedTime: "Oct 24, 2023, 10:42 AM",
+    summary: { subtotal: 61.00, discount: 5.00, shipping: 8.50, tax: 5.00, total: 69.50 },
+    items: [
+      { id: "i1", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 },
+      { id: "i2", product: mockProducts[0], quantity: 2, unitPrice: 24.50, total: 49.00 }
+    ]
   },
 ];
 
