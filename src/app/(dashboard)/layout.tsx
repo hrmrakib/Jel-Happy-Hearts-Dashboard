@@ -27,7 +27,7 @@ export default function DashboardLayout({
       </div>
 
       <main className="flex-1 overflow-y-auto w-full">
-        <div className="mx-auto max-w-7xl h-full flex flex-col relative">
+        <div className="container mx-auto h-full flex flex-col relative">
           {/* Mobile menu button */}
           <div className="lg:hidden absolute top-10 left-8 z-30">
             <button 

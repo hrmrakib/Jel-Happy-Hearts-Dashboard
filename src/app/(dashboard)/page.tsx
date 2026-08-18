@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
 
 export default function OverviewPage() {
   return (
-    <div className="flex flex-col min-h-full pb-8">
+    <div className="container mx-auto flex flex-col min-h-full pb-8">
       <Header 
         title="Overview" 
         description="Real-time monetization and user acquisition insights" 

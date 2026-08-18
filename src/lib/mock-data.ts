@@ -102,3 +102,204 @@ export const userGrowthData = [
   { name: 'Jul', value: 400 },
   { name: 'Aug', value: 340 },
 ];
+
+import { Product, Order, StoreSummaryData, LowStockAlertItem, TopSellingProduct } from "@/types";
+
+export const storeSummaryData: StoreSummaryData = {
+  totalIncome: 5180,
+  totalCompletedOrder: 725,
+  pendingOrder: 25,
+  totalProduct: 725,
+  todaysSales: 725,
+};
+
+export const mockProducts: Product[] = [
+  {
+    id: "p1",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12345",
+    category: "0175589484",
+    price: 124,
+    stock: 120,
+    status: "Active",
+    totalRevenue: 125,
+    totalUnitSold: 120,
+    previousStock: 125,
+    image: "https://images.unsplash.com/photo-1584982751601-97d880f6f9fa?w=400&q=80",
+  },
+  {
+    id: "p2",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12346",
+    category: "0175589484",
+    price: 124,
+    stock: 0,
+    status: "Out of Stock",
+  },
+  {
+    id: "p3",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12347",
+    category: "0175589484",
+    price: 124,
+    stock: 5,
+    status: "Low Stock",
+  },
+  {
+    id: "p4",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12348",
+    category: "0175589484",
+    price: 124,
+    stock: 120,
+    status: "Active",
+  },
+  {
+    id: "p5",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12349",
+    category: "0175589484",
+    price: 124,
+    stock: 120,
+    status: "Active",
+  },
+  {
+    id: "p6",
+    name: "Stethoscope Premium Medical Equipment",
+    sku: "#12350",
+    category: "0175589484",
+    price: 124,
+    stock: 120,
+    status: "Active",
+  },
+];
+
+export const mockOrders: Order[] = [
+  {
+    id: "o1",
+    orderId: "#ORD-8821",
+    user: {
+      name: "Olivia Rhye",
+      id: "#12345",
+      avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    },
+    productName: "Standing Desk Pro",
+    amount: 212,
+    status: "Delivered",
+    date: "19 March, 2026",
+  },
+  {
+    id: "o2",
+    orderId: "#ORD-8822",
+    user: {
+      name: "Olivia Rhye",
+      id: "#12345",
+      avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    },
+    productName: "Standing Desk Pro",
+    amount: 212,
+    status: "Processing",
+    date: "19 March, 2026",
+  },
+  {
+    id: "o3",
+    orderId: "#ORD-8823",
+    user: {
+      name: "Olivia Rhye",
+      id: "#12345",
+      avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    },
+    productName: "Standing Desk Pro",
+    amount: 212,
+    status: "Shipped",
+    date: "19 March, 2026",
+  },
+  {
+    id: "o4",
+    orderId: "#ORD-8824",
+    user: {
+      name: "Olivia Rhye",
+      id: "#12345",
+      avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    },
+    productName: "Standing Desk Pro",
+    amount: 212,
+    status: "Pending",
+    date: "19 March, 2026",
+  },
+  {
+    id: "o5",
+    orderId: "#ORD-8825",
+    user: {
+      name: "Olivia Rhye",
+      id: "#12345",
+      avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    },
+    productName: "Standing Desk Pro",
+    amount: 212,
+    status: "Canceled",
+    date: "19 March, 2026",
+  },
+];
+
+export const mockLowStockAlerts: LowStockAlertItem[] = [
+  {
+    id: "ls1",
+    name: "USB-C Dock Station 12-in-1",
+    sku: "SKU-00421",
+    left: 3,
+    min: 10,
+  },
+  {
+    id: "ls2",
+    name: "Monitor Light Bar Pro",
+    sku: "SKU-00318",
+    left: 7,
+    min: 15,
+  },
+  {
+    id: "ls3",
+    name: "Laptop Stand Aluminum",
+    sku: "SKU-00209",
+    left: 2,
+    min: 10,
+  },
+  {
+    id: "ls4",
+    name: "Mouse Pad XL Stitched",
+    sku: "SKU-00512",
+    left: 9,
+    min: 20,
+  },
+];
+
+export const mockTopSellingProducts: TopSellingProduct[] = [
+  {
+    id: "ts1",
+    name: "Wireless ANC Headphones",
+    unitsSold: 1842,
+    revenue: 404400,
+    trend: 18.4,
+  },
+  {
+    id: "ts2",
+    name: "Ergonomic Chair X3",
+    unitsSold: 834,
+    revenue: 456800,
+    trend: 12.1,
+  },
+  {
+    id: "ts3",
+    name: "Mechanical Keyboard TKL",
+    unitsSold: 2310,
+    revenue: 389600,
+    trend: 24.7,
+  },
+  {
+    id: "ts4",
+    name: "4K Webcam Ultra",
+    unitsSold: 1120,
+    revenue: 145600,
+    trend: -9.3,
+  },
+];

@@ -19,7 +19,7 @@ export default function ManageUsersPage() {
   const [currentPage, setCurrentPage] = React.useState(1)
 
   return (
-    <div className="flex flex-col min-h-full pb-8">
+    <div className="container mx-auto flex flex-col min-h-full pb-8">
       <Header title="Manage Users" />
       
       <main className="flex-1 space-y-6">

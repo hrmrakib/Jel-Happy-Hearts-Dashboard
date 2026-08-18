@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils"
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "Manage Users", href: "/manage-users", icon: Users },
-  { name: "Store Manage", href: "/store-manage", icon: Store },
+  { name: "Manage Store", href: "/manage-store", icon: Store },
   { name: "Happy Bodies", href: "/happy-bodies", icon: Dumbbell },
   { name: "Happy Heart", href: "/happy-heart", icon: Heart },
   { name: "Happy Smile", href: "/happy-smile", icon: Smile },
@@ -59,7 +59,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
       {/* Navigation */}
       <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
         {navigation.map((item) => {
-          const isActive = pathname === item.href
+          const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
           return (
             <Link
               key={item.name}
