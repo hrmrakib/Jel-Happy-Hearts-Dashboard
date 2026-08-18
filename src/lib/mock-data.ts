@@ -515,3 +515,138 @@ export const mockHappyBodiesData: Record<string, Category> = {
     ]
   }
 };
+
+export const mockHappyHeartData: Record<string, Category> = {
+  "Tool 1": {
+    id: "hh_t1",
+    title: "Tool 1",
+    items: [
+      {
+        id: "hh_s1",
+        title: "Step 1",
+        blocks: [
+          { id: "s1_b1", title: "Title", content: "What was the charge trying to tell you?" },
+          { id: "s1_b2", title: "Subtitle", content: "Not about your child. About you." },
+          { 
+            id: "s1_b3", 
+            title: "Option", 
+            content: "", 
+            type: "options",
+            options: [
+              "I needed to feel heard, and I wasn't",
+              "That moment reminded me of something from my own childhood",
+              "I was already running on empty before this happened"
+            ]
+          }
+        ]
+      },
+      {
+        id: "hh_s2",
+        title: "Step 2",
+        blocks: [
+          { id: "s2_b1", title: "Title", content: "Where is the charge sitting right now?" },
+          { id: "s2_b2", title: "Subtitle", content: "Place one hand on your chest or belly. Don't name it as an emotion yet — find it as a sensation." },
+          { id: "s2_b3", title: "Breath", content: "30 Sec" }
+        ]
+      },
+      {
+        id: "hh_s3",
+        title: "Step 3",
+        blocks: [
+          { id: "s3_b1", title: "Title", content: "Where is the charge sitting right now?" },
+          { id: "s3_b2", title: "Subtitle", content: "Place one hand on your chest or belly. Don't name it as an emotion yet — find it as a sensation." },
+          { id: "s3_b3", title: "Highlighted Text", content: "Title" },
+          { id: "s3_b4", title: "Highlighted Text", content: "Body Text" }
+        ]
+      },
+      {
+        id: "hh_before",
+        title: "Before you close this",
+        blocks: [
+          { id: "bef_b1", title: "Title", content: "Where is the charge sitting right now?" },
+          { id: "bef_b2", title: "Subtitle", content: "Place one hand on your chest or belly. Don't name it as an emotion yet — find it as a sensation." },
+          { 
+            id: "bef_b3", 
+            title: "Option", 
+            content: "", 
+            type: "options",
+            options: [
+              "Tight throat",
+              "Heavy chest",
+              "Heat in my face",
+              "Clenched jaw",
+              "Tense shoulders",
+              "Hollow belly",
+              "Racing heart",
+              "Something else"
+            ]
+          }
+        ]
+      },
+      { 
+        id: "hh_help", 
+        title: "Help them land", 
+        blocks: [
+          { id: "hl_b1", title: "Title", content: "What was the charge trying to tell you?" },
+          { id: "hl_b2", title: "Subtitle", content: "Not about your child. About you." },
+          { id: "hl_b3", title: "Highlighted Text", content: "Write here" }
+        ] 
+      },
+      { 
+        id: "hh_stay", 
+        title: "Say this to your child", 
+        blocks: [
+          {
+            id: "st_b1",
+            title: "Option",
+            content: "",
+            type: "options",
+            options: [
+              "Can you put your hand on your heart for me?",
+              "Now close your eyes if that feels okay.",
+              "Where do you feel the big feeling right now? Your chest? Your tummy? Your throat?"
+            ]
+          },
+          { id: "st_b2", title: "Highlighted Text", content: "Pause here. Give them space to feel and answer. Don't rush." }
+        ] 
+      },
+      { 
+        id: "hh_breath", 
+        title: "Breath Together", 
+        blocks: [
+          {
+            id: "br_b1",
+            title: "Option",
+            content: "",
+            type: "options",
+            options: [
+              "You don't have to make it go away. Just find it.",
+              "Now let's take one big breath together."
+            ]
+          },
+          { id: "br_b2", title: "Highlighted Text", content: "In through the nose, long and slow out through the mouth. Breath with them" }
+        ] 
+      },
+      { 
+        id: "hh_here", 
+        title: "Stay here", 
+        blocks: [
+          {
+            id: "hr_b1",
+            title: "Option",
+            content: "",
+            type: "options",
+            options: [
+              "Did you feel that? Your body just did something really clever. It started to settle.",
+              "You're safe. I'm right here. Let's just stay here for a moment."
+            ]
+          },
+          { id: "hr_b2", title: "Highlighted Text", content: "No words needed now. Just stay. Let the silence hold you both." }
+        ] 
+      }
+    ]
+  },
+  "Tool 2": { id: "hh_t2", title: "Tool 2", items: [] },
+  "Tool 3": { id: "hh_t3", title: "Tool 3", items: [] },
+  "Tool 4": { id: "hh_t4", title: "Tool 4", items: [] },
+};

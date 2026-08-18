@@ -114,6 +114,8 @@ export interface ContentBlockData {
   id: string;
   title: string;
   content: string; // HTML or plain text representing the content
+  type?: "text" | "options"; // determines if we render options list or normal content
+  options?: string[]; // for Happy Heart options list
 }
 
 export interface VideoData {
