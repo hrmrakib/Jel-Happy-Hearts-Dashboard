@@ -17,8 +17,8 @@
   --background: #E6E6E6; /* Global application background */
   --foreground: #1c1917; /* Dark text */
   
-  --primary: #c55d3d; /* The rust/orange color */
-  --primary-50: #fbf5f3; 
+  --primary: #c4612a; /* The rust/orange color */
+  --primary-50: #f9efea; 
   --primary-100: #f6ebe6; /* Used for table headers, active rows, soft badges */
   --primary-foreground: #ffffff;
   
@@ -29,7 +29,7 @@
   :root {
     --background: #0f172a;
     --foreground: #f8fafc;
-    --primary: #c55d3d;
+    --primary: #c4612a;
     --primary-50: #1e1b1a;
     --primary-100: #2d2422;
     --primary-foreground: #ffffff;
