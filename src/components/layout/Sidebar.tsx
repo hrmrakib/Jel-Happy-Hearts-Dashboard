@@ -17,6 +17,7 @@ import {
   LifeBuoy
 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
@@ -45,19 +46,12 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
         </button>
       )}
       {/* Logo Area */}
-      <div className="flex h-24 shrink-0 items-center justify-center px-6">
+      <div className="flex h-28 shrink-0 items-center justify-center px-6"> 
         <div className="flex flex-col items-center">
-          <div className="relative flex h-12 w-20 items-end justify-center">
-             {/* Mock Logo using CSS shapes/colors */}
-             <div className="absolute w-16 h-8 rounded-t-full border-4 border-[#F2C272] border-b-0 top-0"></div>
-             <div className="absolute w-12 h-6 rounded-t-full border-4 border-[#73C2C4] border-b-0 top-2"></div>
-             <div className="absolute w-8 h-4 rounded-t-full border-4 border-[#F69288] border-b-0 top-4"></div>
-             <Heart className="absolute -right-2 top-4 h-6 w-6 text-primary fill-primary" />
-          </div>
-          <span className="text-[10px] tracking-wider text-gray-500 font-medium mt-1">HAPPY HEART</span>
+          <Image src="/logo.png" alt="Logo" width={100} height={100} />
         </div>
       </div>
-
+ 
       {/* Navigation */}
       <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
         {navigation.map((item) => {
