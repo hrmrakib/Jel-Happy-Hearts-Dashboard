@@ -22,7 +22,7 @@ export function RecentOrdersTable() {
   return (
     <div className="w-full overflow-auto">
       <table className="w-full text-left text-sm whitespace-nowrap">
-        <thead className="bg-primary-50/50 text-gray-500">
+        <thead className="bg-[#F9EFEA] text-gray-500">
           <tr>
             <th className="px-6 py-4 font-medium rounded-tl-xl w-10">
               <input type="checkbox" className="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" />

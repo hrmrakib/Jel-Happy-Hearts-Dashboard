@@ -26,7 +26,7 @@ export function NotificationsDropdown() {
       <Button 
         variant="ghost" 
         size="icon" 
-        className="relative rounded-full bg-primary-50 text-gray-600 hover:bg-primary-100"
+        className="relative rounded-full bg-[#ECEAE9] text-gray-600 hover:bg-primary-100"
         onClick={toggleDropdown}
       >
         <Bell className="h-5 w-5" />

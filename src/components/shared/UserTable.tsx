@@ -25,7 +25,7 @@ export function UserTable({ users }: UserTableProps) {
       <div className="w-full overflow-x-auto">
         <table className="w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-gray-100 bg-primary-100/50 text-gray-500 font-medium">
+            <tr className="border-b border-gray-100 bg-[#F9EFEA] text-gray-500 font-medium">
               <th className="px-6 py-4 rounded-tl-xl whitespace-nowrap">
                 <div className="flex items-center space-x-3">
                   <input type="checkbox" className="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" />

@@ -42,7 +42,7 @@ export function StoreSummaryCards() {
                 <p className="text-sm font-medium text-gray-500 mb-1">{card.title}</p>
                 <h2 className="text-3xl font-serif text-gray-900">{card.value}</h2>
               </div>
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-50">
+              <div className="flex h-8 w-8 items-start justify-start rounded-full bg-transparent">
                 <card.icon className="h-4 w-4 text-primary" aria-hidden="true" />
               </div>
             </div>
