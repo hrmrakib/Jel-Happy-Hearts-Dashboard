@@ -25,17 +25,7 @@
   --sidebar: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-    --primary: #c4612a;
-    --primary-50: #1e1b1a;
-    --primary-100: #2d2422;
-    --primary-foreground: #ffffff;
-    --sidebar: #1e293b;
-  }
-}
+
 
 body {
   background-color: var(--color-background);

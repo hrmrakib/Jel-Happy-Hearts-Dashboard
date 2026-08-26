@@ -25,7 +25,7 @@ export function RevenueChart() {
             variant={timeframe === "Yearly" ? "secondary" : "ghost"} 
             size="sm"
             onClick={() => setTimeframe("Yearly")}
-            className="rounded-full text-xs h-7"
+            className={`rounded-full text-xs h-7 ${timeframe === "Yearly" ? "bg-[#F9EFEA] text-primary font-bold" : ""}`}
           >
             Yearly
           </Button>
@@ -33,7 +33,7 @@ export function RevenueChart() {
             variant={timeframe === "Monthly" ? "secondary" : "ghost"} 
             size="sm"
             onClick={() => setTimeframe("Monthly")}
-            className="rounded-full text-xs h-7"
+            className={`rounded-full text-xs h-7 ${timeframe === "Monthly" ? "bg-[#F9EFEA] text-primary font-bold" : ""}`}
           >
             Monthly
           </Button>

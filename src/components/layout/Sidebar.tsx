@@ -35,7 +35,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname()
 
   return (
-    <div className="flex h-full w-64 flex-col bg-white border-r relative">
+    <div className="flex h-full w-64 flex-col bg-white relative">
       {/* Mobile close button */}
       {onClose && (
         <button 
@@ -53,7 +53,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
       </div>
  
       {/* Navigation */}
-      <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
+      <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto border-none">
         {navigation.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
           return (

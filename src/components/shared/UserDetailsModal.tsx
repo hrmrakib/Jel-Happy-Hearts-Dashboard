@@ -50,7 +50,7 @@ export function UserDetailsModal({ user, isOpen, onClose }: UserDetailsModalProp
             <span>•</span>
             <span className="flex items-center">📞 {user.phone}</span>
           </div>
-
+ 
           <div className="absolute right-6 top-16">
              {user.subscription === 'Premium' && (
                <Badge variant="premium" className="rounded-full px-3 py-1 text-[10px]">Premium</Badge>
