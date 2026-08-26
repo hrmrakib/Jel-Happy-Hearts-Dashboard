@@ -10,7 +10,7 @@ export default function LegacyPolicyPage() {
   const [activeTab, setActiveTab] = React.useState(TABS[0])
 
   return (
-    <div className="container mx-auto flex flex-col min-h-full pb-8">
+    <div className="flex flex-col min-h-full pb-8">
       <Header title="Legacy & Policy" />
       
       <main className="flex-1 flex flex-col mt-2 px-6">

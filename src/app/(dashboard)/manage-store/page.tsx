@@ -13,7 +13,7 @@ export default function ManageStorePage() {
   const currentDate = "Wednesday, August 13, 2026"
 
   return (
-    <div className="container mx-auto flex flex-col min-h-full pb-8">
+    <div className="flex flex-col min-h-full pb-8">
       <Header 
         title="Manage Store" 
         description={currentDate} 

@@ -57,7 +57,7 @@ export function ContentManagerLayout({
   const activeItem = activeCategory?.items.find(i => i.id === activeItemId)
 
   return (
-    <div className="container mx-auto flex flex-col min-h-full pb-8">
+    <div className="w-full flex flex-col min-h-full pb-8">
       <Header title={pageTitle} />
       
       <main className="flex-1 flex flex-col mt-2 px-6">

@@ -30,7 +30,7 @@ export default function OrdersPage() {
   }
 
   return (
-    <div className="container mx-auto flex flex-col min-h-full pb-8">
+    <div className="flex flex-col min-h-full pb-8">
       <Header 
         title="Pending Order" 
         description={currentDate} 

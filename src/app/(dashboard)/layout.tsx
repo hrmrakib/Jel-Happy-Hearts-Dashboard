@@ -12,7 +12,7 @@ export default function DashboardLayout({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#E6E6E6]!">
+    <div className="flex h-screen overflow-hidden">
       {/* Mobile sidebar backdrop */}
       {isMobileMenuOpen && (
         <div 
@@ -21,12 +21,12 @@ export default function DashboardLayout({
         />
       )}
       
-      {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-50 transform lg:relative lg:translate-x-0 transition duration-200 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      {/* Sidebar - hidden off-screen on mobile, always visible on desktop */}
+      <div className={`fixed inset-y-0 left-0 z-50 w-64 shrink-0 transform lg:static lg:translate-x-0 transition duration-200 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <Sidebar onClose={() => setIsMobileMenuOpen(false)} />
       </div>
 
-      <main className="flex-1 overflow-y-auto w-full">
+      <main className="flex-1 overflow-y-auto min-w-0">
         <div className="w-full h-full flex flex-col relative">
           {/* Mobile menu button */}
           <div className="lg:hidden absolute top-10 left-8 z-30">

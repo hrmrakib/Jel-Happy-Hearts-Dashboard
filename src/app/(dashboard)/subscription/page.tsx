@@ -27,7 +27,7 @@ export default function SubscriptionPage() {
   }
 
   return (
-    <div className="container mx-auto flex flex-col min-h-full pb-8">
+    <div className="flex flex-col min-h-full pb-8">
       <Header title="Subscription Package" />
       
       <main className="flex-1 mt-2 px-6">
